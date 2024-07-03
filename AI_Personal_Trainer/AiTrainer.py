@@ -34,6 +34,8 @@ while True:
             if dir_right == 0:
                 count_right += 0.5
                 dir_right = 1
+
+                
         if per_right == 0:
             color_right = (0, 255, 0)
             if dir_right == 1:

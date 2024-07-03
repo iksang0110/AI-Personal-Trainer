@@ -34,8 +34,6 @@ while True:
             if dir_right == 0:
                 count_right += 0.5
                 dir_right = 1
-
-                
         if per_right == 0:
             color_right = (0, 255, 0)
             if dir_right == 1:
@@ -69,13 +67,13 @@ while True:
         cv2.rectangle(img, (50, int(bar_left)), (125, 650), color_left, cv2.FILLED)
         cv2.putText(img, f'{int(per_left)} %', (50, 75), cv2.FONT_HERSHEY_PLAIN, 4, color_left, 4)
 
-        # 오른팔 컬 횟수 그리기
-        cv2.rectangle(img, (900, 450), (1150, 720), (0, 255, 0), cv2.FILLED)
-        cv2.putText(img, str(int(count_right)), (970, 670), cv2.FONT_HERSHEY_PLAIN, 15, (255, 0, 0), 25)
+        # 오른팔 컬 횟수 그리기 (크기 조정)
+        cv2.rectangle(img, (1000, 600), (1150, 720), (0, 255, 0), cv2.FILLED)
+        cv2.putText(img, str(int(count_right)), (1020, 710), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 10)
 
-        # 왼팔 컬 횟수 그리기
-        cv2.rectangle(img, (0, 450), (250, 720), (0, 255, 0), cv2.FILLED)
-        cv2.putText(img, str(int(count_left)), (70, 670), cv2.FONT_HERSHEY_PLAIN, 15, (255, 0, 0), 25)
+        # 왼팔 컬 횟수 그리기 (크기 조정)
+        cv2.rectangle(img, (50, 600), (200, 720), (0, 255, 0), cv2.FILLED)
+        cv2.putText(img, str(int(count_left)), (70, 710), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 10)
 
     cTime = time.time()
     fps = 1 / (cTime - pTime)

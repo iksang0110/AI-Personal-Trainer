@@ -60,7 +60,7 @@ while True:
         # 오른팔 바 그리기
         cv2.rectangle(img, (1100, 100), (1175, 650), color_right, 3)
         cv2.rectangle(img, (1100, int(bar_right)), (1175, 650), color_right, cv2.FILLED)
-        cv2.putText(img, f'{int(per_right)} %', (1100, 75), cv2.FONT_HERSHEY_PLAIN, 4, color_right, 4)
+        cv2.putText(img, f'{int(per_right)} %', (1101, 75), cv2.FONT_HERSHEY_PLAIN, 4, color_right, 4)
 
         # 왼팔 바 그리기
         cv2.rectangle(img, (50, 100), (125, 650), color_left, 3)
